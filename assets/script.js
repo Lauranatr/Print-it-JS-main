@@ -26,12 +26,7 @@ let slidePosition = 0;
 
 
 function changeSlide (){
-	// Mettre à jours le src de l'image banner.image
-	console.log(bannerImage) 
-	// Récuperer la nouvelle src
 	let newSrc = "./assets/images/slideshow/" + slides[slidePosition].image
-	console.log(newSrc)
-	// Appliquer la modification à la bonne balise
 	bannerImage.setAttribute("src",newSrc)
 };
 
@@ -42,8 +37,6 @@ function changeTagLine (){
 
 
 function changeDots (){
-	// Ajouter la class dot selected au bout dot
-	// Supprimer a tout les dot la class dot selected
 	const dotArray = dots.querySelectorAll(".dot")
 	let dotSelect = document.querySelector(".dot_selected");
 	dotSelect.classList.remove("dot_selected");
@@ -51,8 +44,6 @@ function changeDots (){
 }
 
 function initDots (){
-	// Remplacer 4 par le nb de slides
-	// Ajouter au premier dot la class dot_selected
 	for (let dotIndex = 0; dotIndex < slides.length ; dotIndex++) {
 		let newDot = document.createElement("div");
 		newDot.classList.add("dot");
@@ -85,8 +76,6 @@ flecheDroite.addEventListener("click", function (event) {
 	changeSlide()
 	changeTagLine()
 	changeDots()
-	// .ooo
-	// o.oo
 });
 
 	
